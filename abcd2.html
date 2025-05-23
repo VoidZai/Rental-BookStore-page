@@ -1,29 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles1.css">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles1.css" />
+  <title>The 3 Mistakes of My Life</title>
 </head>
 <body>
-    <div class="wrapper">
-        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/book-chetan-bhagat-img.png" class="head-image">
-        <h1>The 3 mistakes of my life</h1>
-        <h5>by chetan bhagat</h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda cumque voluptatum alias accusamus sunt exercitationem dolore. Blanditiis earum facere recusandae architecto sequi quibusdam ab dignissimos aliquam? Sed aliquid quas culpa? 
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi eum qui laudantium, ad minima sint incidunt dolores provident odio autem dolorum soluta sunt dolor quia illo facilis aut hic veniam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint facilis architecto dignissimos laudantium impedit voluptatum cum labore. Minima, assumenda. Exercitationem hic numquam ratione natus facilis sequi architecto voluptate at vitae!
+  <header>
+    <button id="toggleBtn" class="toggle-btn">🌙 Dark Mode</button>
+  </header>
 
-        </p>
-        <div class="buttons">
-            <button class="lbtn">
-                 Back
-            </button>
-            <button class="rbtn">
-                Buy Now
-            </button>
-        </div>
+  <div class="wrapper">
+    <img
+      src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/book-chetan-bhagat-img.png"
+      alt="The 3 Mistakes of My Life Book"
+      class="head-image"
+    />
+    <h1>The 3 Mistakes of My Life</h1>
+    <h5>by Chetan Bhagat</h5>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda cumque
+      voluptatum alias accusamus sunt exercitationem dolore. Blanditiis earum
+      facere recusandae architecto sequi quibusdam ab dignissimos aliquam? Sed
+      aliquid quas culpa?
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi eum
+      qui laudantium, ad minima sint incidunt dolores provident odio autem
+      dolorum soluta sunt dolor quia illo facilis aut hic veniam. Lorem ipsum
+      dolor sit amet consectetur adipisicing elit. Sint facilis architecto
+      dignissimos laudantium impedit voluptatum cum labore. Minima, assumenda.
+      Exercitationem hic numquam ratione natus facilis sequi architecto
+      voluptate at vitae!
+    </p>
+    <div class="buttons">
+      <button class="lbtn" onclick="goBack()">Back</button>
+      <button class="rbtn">Buy Now</button>
     </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Rental BookStore. All rights reserved.
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleBtn');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      if (document.body.classList.contains('dark')) {
+        toggleBtn.textContent = '☀️ Light Mode';
+      } else {
+        toggleBtn.textContent = '🌙 Dark Mode';
+      }
+    });
+
+    function goBack() {
+      window.history.back();
+    }
+  </script>
 </body>
 </html>

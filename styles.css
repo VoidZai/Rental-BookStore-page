@@ -56,6 +56,21 @@ body {
   clear: both;
 }
 
+/* Toggle button */
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  margin-left: 1rem;
+  transition: color 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  color: #1abc9c;
+}
+
 /* Section headings */
 .section-heading {
   font-size: 2rem;
@@ -117,36 +132,6 @@ body {
   background-color: #16a085;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .book-card {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .book-image img {
-    width: 100%;
-    max-width: 300px;
-    border-bottom: 1px solid #ddd;
-  }
-
-  .book-details {
-    padding: 1rem;
-    text-align: center;
-  }
-
-  .navbar .logo,
-  .nav-links {
-    float: none;
-    text-align: center;
-  }
-
-  .nav-links {
-    justify-content: center;
-    margin-top: 0.5rem;
-  }
-}
-
 /* Footer styles */
 .footer {
   background-color: #2c3e50;
@@ -186,11 +171,79 @@ body {
   color: #1abc9c;
 }
 
-/* Responsive footer */
+/* Responsive */
+@media (max-width: 768px) {
+  .book-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .book-image img {
+    width: 100%;
+    max-width: 300px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .book-details {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .navbar .logo,
+  .nav-links {
+    float: none;
+    text-align: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+}
+
 @media (max-width: 600px) {
   .footer-container {
     flex-direction: column;
     text-align: center;
     gap: 0.75rem;
   }
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark-mode .navbar {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .book-card {
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode .btn {
+  background-color: #16a085;
+}
+
+body.dark-mode .btn:hover {
+  background-color: #1abc9c;
+}
+
+body.dark-mode .footer {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .nav-links li a {
+  color: #ddd;
+}
+
+body.dark-mode .nav-links li a:hover {
+  color: #1abc9c;
+}
+
+body.dark-mode .theme-toggle-btn {
+  color: #f39c12;
 }
